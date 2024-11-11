@@ -1,0 +1,209 @@
+:root {
+    --background-color: #fafafa; /* Fundo mais claro e neutro */
+    --text-color: #333333; /* Texto escuro */
+    --highlight-color: #f8a1c4; /* Rosa suave (menos intenso) */
+    --gold-color: #d1a000; /* Dourado suave */
+    --secondary-color: #f4c2a1; /* Pêssego suave para equilíbrio */
+    --font-primary: "Poppins", sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-primary);
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+.header {
+    background-color: var(--highlight-color);
+    padding: 20px;
+    text-align: center;
+}
+
+.header__logo {
+    height: 50px;
+    max-width: 180px;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.header__link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.header__link:hover {
+    color: var(--gold-color); /* Hover dourado */
+}
+
+/* BANNER */
+.banner {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, var(--secondary-color), var(--highlight-color)); /* Gradiente suave com tons de pêssego e rosa suave */
+}
+
+.banner__title {
+    font-size: 2.5em;
+    color: var(--highlight-color);
+}
+
+.banner__subtitle {
+    font-size: 1.2em;
+    color: var(--text-color);
+}
+
+.banner__search {
+    margin-top: 20px;
+    padding: 10px 15px;
+    width: 80%;
+    max-width: 500px;
+    border: 2px solid var(--highlight-color);
+    border-radius: 25px;
+    outline: none;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* CAROUSEL */
+.carousel {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.carousel__title {
+    font-size: 1.8em;
+    color: var(--highlight-color);
+    margin-bottom: 20px;
+}
+
+.swiper-slide img {
+    border-radius: 15px;
+    transition: transform 0.3s;
+    max-width: 100%;
+}
+
+.swiper-slide:hover img {
+    transform: scale(1.05);
+}
+
+/* CARD */
+.card {
+    background-color: #ffffff; /* Fundo claro */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card__title {
+    color: var(--highlight-color);
+    font-size: 1.6em;
+}
+
+.card__subtitle {
+    color: var(--text-color);
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.card__text {
+    color: var(--text-color);
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.card__image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.card__button {
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.card__button:hover {
+    background-color: var(--gold-color); /* Hover dourado */
+    color: var(--text-color);
+}
+
+/* SUBSCRIBE */
+.subscribe {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--highlight-color);
+    margin-top: 20px;
+}
+
+.subscribe__title {
+    color: #ffffff;
+    font-size: 1.8em;
+}
+
+.subscribe__text {
+    color: #ffffff;
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+.subscribe__email {
+    margin-top: 20px;
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.subscribe__button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--gold-color);
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.subscribe__button:hover {
+    background-color: var(--highlight-color);
+    color: var(--gold-color);
+}
+
+/* FOOTER */
+.footer {
+    background-color: var(--highlight-color);
+    padding: 20px;
+    text-align: center;
+}
+
+.footer__text {
+    color: var(--text-color);
+    font-size: 0.9em;
+}

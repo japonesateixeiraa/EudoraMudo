@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eudora Mudo</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <img src="img/MUDO.png" alt="Logo Victoria Santos Mudo" class="header__logo">
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li><a href="#" class="header__link">Novidades</a></li>
+          <li><a href="#" class="header__link">Produtos</a></li>
+          <li><a href="#" class="header__link">Maquiagem</a></li>
+          <li><a href="#" class="header__link">Cuidados com a pele</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="banner">
+    <h2 class="banner__title">Beleza que transforma sua rotina</h2>
+    <p class="banner__subtitle">Descubra os produtos que realçam sua beleza natural!</p>
+    <input type="search" class="banner__search" placeholder="Qual produto você está procurando?">
+  </section>
+
+  <section class="carousel">
+    <h2 class="carousel__title">Novidades Exclusivas</h2>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img/SHAMPOO.png" alt="Produto de Maquiagem 1"></div>
+        <div class="swiper-slide"><img src="img/CONDICIONADOR.png" alt="Produto de Maquiagem 2"></div>
+        <div class="swiper-slide"><img src="img/LEAVE.png" alt="Produto de Maquiagem 3"></div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="card__description">
+      <h3 class="card__title">Explore a nossa linha de cuidados nutritivos</h3>
+      <h4 class="card__subtitle">Nutrição e Bem-Estar</h4>
+      <p class="card__text">Cuide do seu cabelo com os melhores produtos para um toque suave e radiante.</p>
+      <img src="img/MASCARA.png" alt="Creme de Pele Victoria Santos Mudo" class="card__image">
+    </div>
+    <div class="card__buttons">
+      <button class="card__button" id="favoriteButton">Adicionar aos Favoritos</button>
+      <button class="card__button" id="cartButton">Adicionar ao Carrinho</button>
+    </div>
+  </section>
+
+  <section class="subscribe">
+    <h2 class="subscribe__title">Fique por dentro das novidades!</h2>
+    <p class="subscribe__text">Receba ofertas exclusivas e dicas de beleza diretamente no seu e-mail.</p>
+    <input type="email" placeholder="Cadastre seu e-mail" class="subscribe__email" id="emailInput" />
+    <button class="subscribe__button" id="subscribeButton">Inscrever-se</button>
+  </section>
+
+  <footer class="footer">
+    <p class="footer__text">© 2024 Victoria Santos Mudo. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Biblioteca Swiper para o carrossel -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // Inicializar o Swiper
+    const swiper = new Swiper(".swiper", {
+      spaceBetween: 10,
+      slidesPerView: 3,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+    // Função para Favoritar
+    document.getElementById("favoriteButton").addEventListener("click", () => {
+      alert("Produto adicionado aos favoritos!");
+    });
+
+    // Função para Adicionar ao Carrinho
+    document.getElementById("cartButton").addEventListener("click", () => {
+      alert("Produto adicionado ao carrinho!");
+    });
+
+    // Função para Validação de Email
+    document.getElementById("subscribeButton").addEventListener("click", () => {
+      const emailInput = document.getElementById("emailInput").value;
+      if (emailInput.includes("@") && emailInput.includes(".")) {
+        alert("Inscrição realizada com sucesso!");
+      } else {
+        alert("Por favor, insira um e-mail válido.");
+      }
+    });
+  </script>
+</body>
+</html>
